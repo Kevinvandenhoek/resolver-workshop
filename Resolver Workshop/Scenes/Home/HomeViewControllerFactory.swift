@@ -6,12 +6,12 @@
 //
 
 import Foundation
-import Swinject
+import Resolver
 import UIKit
 
 struct HomeViewControllerFactory {
     
-    let loginWorkerProvider: Provider<LoginWorker>
+    let loginWorkerProvider: Provider<LoginWorker> = .init()
     
     func make() -> HomeViewController {
         return HomeViewController(

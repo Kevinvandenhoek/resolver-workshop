@@ -5,11 +5,11 @@
 //  Created by Kevin van den Hoek on 28/10/2021.
 //
 
-import Swinject
+import Resolver
 
 struct AppDependencies {
     
-    let container = Container()
+    let container = Container.main
     
     init() {
         let assemblies: [Assembly] = [
@@ -24,10 +24,10 @@ struct AppDependencies {
 extension AppDependencies {
     
     func resolve<Service>() -> Service {
-        return container.resolve(Service.self)!
+        return container.resolve(Service.self)
     }
     
     func resolve<Service>(_ type: Service.Type) -> Service {
-        return container.resolve(Service.self)!
+        return container.resolve(Service.self)
     }
 }

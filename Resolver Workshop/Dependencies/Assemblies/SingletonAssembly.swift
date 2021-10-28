@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import Swinject
-import SwinjectAutoregistration
+import Resolver
 
 struct SingletonAssembly: Assembly {
     

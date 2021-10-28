@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Resolver
 
 protocol LoginWorker {
     func login(_ completion: @escaping (Bool) -> Void)
@@ -13,7 +14,10 @@ protocol LoginWorker {
 
 struct LoginService: LoginWorker {
     
+    @LateInjected var apiWorker: APIWorker
+    
     func login(_ completion: @escaping (Bool) -> Void) {
+        apiWorker.call()
         delay(1) {
             completion(true)
         }
