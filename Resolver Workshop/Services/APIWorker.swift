@@ -12,6 +12,10 @@ protocol APIWorker {
 }
 
 struct APIService: APIWorker {
+    init() {
+        print("did init apiservice")
+    }
+    
     func call() { }
 }
 
