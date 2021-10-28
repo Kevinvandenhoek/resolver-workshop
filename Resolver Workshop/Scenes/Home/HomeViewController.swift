@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import EasyPeasy
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: ViewController {
     
-    let loginWorker: LoginWorker
+    // MARK: Properties
+    private let loginWorker: LoginWorker
     
+    private lazy var label: UILabel = makeLabel()
+    
+    // MARK: Lifecycle
     required init?(coder: NSCoder) { fatalError() }
     
     init(loginWorker: LoginWorker) {
@@ -20,6 +25,33 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        setup()
+    }
+}
+
+// MARK: Setup
+private extension HomeViewController {
+    
+    func setup() {
+        view.backgroundColor = .for(.background);
+        view.addSubview(label)
+        label.easy.layout(Edges())
+        
+        label.text = "Logging in..."
+        loginWorker.login({ didLogin in
+            self.label.text = "Is logged in: \(didLogin)"
+        })
+    }
+}
+
+// MARK: Factory
+private extension HomeViewController {
+    
+    func makeLabel() -> UILabel {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont(name: "Baskerville-Bold", size: 40)
+        label.textColor = .for(.text);
+        return label
     }
 }

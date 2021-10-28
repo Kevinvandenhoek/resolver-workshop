@@ -21,6 +21,10 @@
 		0AAC0696272ABFE100818356 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC0695272ABFE100818356 /* ServiceAssembly.swift */; };
 		0AAC0698272AC01C00818356 /* SingletonAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC0697272AC01C00818356 /* SingletonAssembly.swift */; };
 		0AAC069A272AC34800818356 /* SceneAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC0699272AC34800818356 /* SceneAssembly.swift */; };
+		0AAC069D272AC57200818356 /* EasyPeasy in Frameworks */ = {isa = PBXBuildFile; productRef = 0AAC069C272AC57200818356 /* EasyPeasy */; };
+		0AAC06A0272AC63200818356 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC069F272AC63200818356 /* UIColor+Extension.swift */; };
+		0AAC06A4272AC85400818356 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC06A3272AC85400818356 /* ViewController.swift */; };
+		0AAC06A7272AC93700818356 /* Global+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC06A6272AC93700818356 /* Global+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,9 @@
 		0AAC0695272ABFE100818356 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		0AAC0697272AC01C00818356 /* SingletonAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingletonAssembly.swift; sourceTree = "<group>"; };
 		0AAC0699272AC34800818356 /* SceneAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAssembly.swift; sourceTree = "<group>"; };
+		0AAC069F272AC63200818356 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		0AAC06A3272AC85400818356 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0AAC06A6272AC93700818356 /* Global+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AAC0687272ABBE300818356 /* SwinjectAutoregistration in Frameworks */,
+				0AAC069D272AC57200818356 /* EasyPeasy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +117,8 @@
 		0AAC0650272AB92800818356 /* Resolver Workshop */ = {
 			isa = PBXGroup;
 			children = (
+				0AAC06A1272AC84500818356 /* Base */,
+				0AAC069E272AC62800818356 /* Extensions */,
 				0AAC068E272ABE5600818356 /* Scenes */,
 				0AAC0689272ABDD100818356 /* Services */,
 				0AAC0688272ABDCC00818356 /* Dependencies */,
@@ -181,6 +191,31 @@
 			path = Assemblies;
 			sourceTree = "<group>";
 		};
+		0AAC069E272AC62800818356 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC069F272AC63200818356 /* UIColor+Extension.swift */,
+				0AAC06A6272AC93700818356 /* Global+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0AAC06A1272AC84500818356 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC06A2272AC84A00818356 /* ViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0AAC06A2272AC84A00818356 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC06A3272AC85400818356 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +234,7 @@
 			name = "Resolver Workshop";
 			packageProductDependencies = (
 				0AAC0686272ABBE300818356 /* SwinjectAutoregistration */,
+				0AAC069C272AC57200818356 /* EasyPeasy */,
 			);
 			productName = "Resolver Workshop";
 			productReference = 0AAC064E272AB92800818356 /* Resolver Workshop.app */;
@@ -274,6 +310,7 @@
 			mainGroup = 0AAC0645272AB92700818356;
 			packageReferences = (
 				0AAC0685272ABBE300818356 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				0AAC069B272AC57200818356 /* XCRemoteSwiftPackageReference "EasyPeasy" */,
 			);
 			productRefGroup = 0AAC064F272AB92800818356 /* Products */;
 			projectDirPath = "";
@@ -317,11 +354,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAC06A4272AC85400818356 /* ViewController.swift in Sources */,
 				0AAC0691272ABE6300818356 /* HomeViewController.swift in Sources */,
 				0AAC068D272ABE2000818356 /* AppDependencies.swift in Sources */,
 				0AAC0652272AB92800818356 /* AppDelegate.swift in Sources */,
+				0AAC06A0272AC63200818356 /* UIColor+Extension.swift in Sources */,
 				0AAC0698272AC01C00818356 /* SingletonAssembly.swift in Sources */,
 				0AAC069A272AC34800818356 /* SceneAssembly.swift in Sources */,
+				0AAC06A7272AC93700818356 /* Global+Extension.swift in Sources */,
 				0AAC0696272ABFE100818356 /* ServiceAssembly.swift in Sources */,
 				0AAC0693272ABEBE00818356 /* HomeViewControllerFactory.swift in Sources */,
 				0AAC068B272ABDE600818356 /* LoginWorker.swift in Sources */,
@@ -690,6 +730,14 @@
 				kind = branch;
 			};
 		};
+		0AAC069B272AC57200818356 /* XCRemoteSwiftPackageReference "EasyPeasy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nakiostudio/EasyPeasy.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -697,6 +745,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0AAC0685272ABBE300818356 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = SwinjectAutoregistration;
+		};
+		0AAC069C272AC57200818356 /* EasyPeasy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AAC069B272AC57200818356 /* XCRemoteSwiftPackageReference "EasyPeasy" */;
+			productName = EasyPeasy;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

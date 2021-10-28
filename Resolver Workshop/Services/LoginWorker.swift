@@ -14,6 +14,8 @@ protocol LoginWorker {
 struct LoginService: LoginWorker {
     
     func login(_ completion: @escaping (Bool) -> Void) {
-        completion(true)
+        delay(1) {
+            completion(true)
+        }
     }
 }
